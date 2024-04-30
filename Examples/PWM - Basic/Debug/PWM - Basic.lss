@@ -1,0 +1,576 @@
+
+PWM - Basic.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000414  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003a0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000013  00800100  00800100  00000414  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000414  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000444  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000c0  00000000  00000000  00000484  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001401  00000000  00000000  00000544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d9e  00000000  00000000  00001945  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000722  00000000  00000000  000026e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000015c  00000000  00000000  00002e08  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000688  00000000  00000000  00002f64  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000299  00000000  00000000  000035ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000080  00000000  00000000  00003885  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5e 00 	jmp	0xbc	; 0xbc <__dtors_end>
+   4:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+   8:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+   c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  10:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  14:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  18:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  1c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  20:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  24:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  28:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  2c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  30:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  34:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  38:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  3c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  40:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  44:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  48:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  4c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  50:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  54:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  58:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  5c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  60:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  64:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  68:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  6c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  70:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  74:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  78:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  7c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  80:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  84:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  88:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  8c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  90:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  94:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  98:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  9c:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  a0:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  a4:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  a8:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  ac:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+  b0:	0c 94 7b 00 	jmp	0xf6	; 0xf6 <__bad_interrupt>
+
+000000b4 <__ctors_start>:
+  b4:	46 01       	movw	r8, r12
+  b6:	7d 01       	movw	r14, r26
+
+000000b8 <__ctors_end>:
+  b8:	4d 01       	movw	r8, r26
+  ba:	84 01       	movw	r16, r8
+
+000000bc <__dtors_end>:
+  bc:	11 24       	eor	r1, r1
+  be:	1f be       	out	0x3f, r1	; 63
+  c0:	cf ef       	ldi	r28, 0xFF	; 255
+  c2:	d8 e0       	ldi	r29, 0x08	; 8
+  c4:	de bf       	out	0x3e, r29	; 62
+  c6:	cd bf       	out	0x3d, r28	; 61
+
+000000c8 <__do_clear_bss>:
+  c8:	21 e0       	ldi	r18, 0x01	; 1
+  ca:	a0 e0       	ldi	r26, 0x00	; 0
+  cc:	b1 e0       	ldi	r27, 0x01	; 1
+  ce:	01 c0       	rjmp	.+2      	; 0xd2 <.do_clear_bss_start>
+
+000000d0 <.do_clear_bss_loop>:
+  d0:	1d 92       	st	X+, r1
+
+000000d2 <.do_clear_bss_start>:
+  d2:	a3 31       	cpi	r26, 0x13	; 19
+  d4:	b2 07       	cpc	r27, r18
+  d6:	e1 f7       	brne	.-8      	; 0xd0 <.do_clear_bss_loop>
+
+000000d8 <__do_global_ctors>:
+  d8:	10 e0       	ldi	r17, 0x00	; 0
+  da:	cc e5       	ldi	r28, 0x5C	; 92
+  dc:	d0 e0       	ldi	r29, 0x00	; 0
+  de:	04 c0       	rjmp	.+8      	; 0xe8 <__do_global_ctors+0x10>
+  e0:	21 97       	sbiw	r28, 0x01	; 1
+  e2:	fe 01       	movw	r30, r28
+  e4:	0e 94 bd 01 	call	0x37a	; 0x37a <__tablejump2__>
+  e8:	ca 35       	cpi	r28, 0x5A	; 90
+  ea:	d1 07       	cpc	r29, r17
+  ec:	c9 f7       	brne	.-14     	; 0xe0 <__do_global_ctors+0x8>
+  ee:	0e 94 8b 01 	call	0x316	; 0x316 <main>
+  f2:	0c 94 c3 01 	jmp	0x386	; 0x386 <__do_global_dtors>
+
+000000f6 <__bad_interrupt>:
+  f6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000fa <_ZN7__PWM__C1EPVhS1_S1_S1_>:
+/*!
+ * @brief  __PWM__ constructor
+ * @param  TCCRA, TCCRB, OCRA, OCRB
+ *         The PWM registers
+ */
+__PWM__::__PWM__(volatile uint8_t* tccra, volatile uint8_t* tccrb, volatile uint8_t* ocra, volatile uint8_t* ocrb)
+  fa:	0f 93       	push	r16
+  fc:	1f 93       	push	r17
+  fe:	fc 01       	movw	r30, r24
+{
+    this->tccra = tccra;
+ 100:	72 83       	std	Z+2, r23	; 0x02
+ 102:	61 83       	std	Z+1, r22	; 0x01
+    this->tccrb = tccrb;
+ 104:	54 83       	std	Z+4, r21	; 0x04
+ 106:	43 83       	std	Z+3, r20	; 0x03
+    this->ocra = ocra;
+ 108:	36 83       	std	Z+6, r19	; 0x06
+ 10a:	25 83       	std	Z+5, r18	; 0x05
+    this->ocrb = ocrb;
+ 10c:	10 87       	std	Z+8, r17	; 0x08
+ 10e:	07 83       	std	Z+7, r16	; 0x07
+}
+ 110:	1f 91       	pop	r17
+ 112:	0f 91       	pop	r16
+ 114:	08 95       	ret
+
+00000116 <_ZN7__PWM__D1Ev>:
+
+/*!
+ * @brief  __PWM__ destructor
+ */
+__PWM__::~__PWM__()
+ 116:	fc 01       	movw	r30, r24
+{
+    this->tccra = NULL;
+ 118:	12 82       	std	Z+2, r1	; 0x02
+ 11a:	11 82       	std	Z+1, r1	; 0x01
+    this->tccrb = NULL;
+ 11c:	14 82       	std	Z+4, r1	; 0x04
+ 11e:	13 82       	std	Z+3, r1	; 0x03
+    this->ocra = NULL;
+ 120:	16 82       	std	Z+6, r1	; 0x06
+ 122:	15 82       	std	Z+5, r1	; 0x05
+    this->ocrb = NULL;
+ 124:	10 86       	std	Z+8, r1	; 0x08
+ 126:	17 82       	std	Z+7, r1	; 0x07
+ 128:	08 95       	ret
+
+0000012a <_ZN7__PWM__5beginEv>:
+
+/*!
+ * @brief  Begins the PWM implementation
+ */
+void __PWM__::begin(void)
+{
+ 12a:	fc 01       	movw	r30, r24
+    #if defined(__AVR_ATmega328P__) || \
+        defined(__AVR_ATmega328PB__)
+    if (this->tccra == &TCCR0A)
+ 12c:	81 81       	ldd	r24, Z+1	; 0x01
+ 12e:	92 81       	ldd	r25, Z+2	; 0x02
+ 130:	84 34       	cpi	r24, 0x44	; 68
+ 132:	91 05       	cpc	r25, r1
+ 134:	09 f5       	brne	.+66     	; 0x178 <_ZN7__PWM__5beginEv+0x4e>
+    {
+        DDRD = DDRD | ((1 << PD6) | (1 << PD5));                                     // Set OCA & OCB as OUTPUT
+ 136:	8a b1       	in	r24, 0x0a	; 10
+ 138:	80 66       	ori	r24, 0x60	; 96
+ 13a:	8a b9       	out	0x0a, r24	; 10
+        *this->tccra = (*this->tccra & ~(1 << COM0A0)) | (1 << COM0A1);              // Non-inverted PWM on OCA
+ 13c:	a1 81       	ldd	r26, Z+1	; 0x01
+ 13e:	b2 81       	ldd	r27, Z+2	; 0x02
+ 140:	8c 91       	ld	r24, X
+ 142:	8f 73       	andi	r24, 0x3F	; 63
+ 144:	80 68       	ori	r24, 0x80	; 128
+ 146:	8c 93       	st	X, r24
+        *this->tccra = (*this->tccra & ~(1 << COM0B0)) | (1 << COM0B1);              // Non-inverted PWM on OCB
+ 148:	a1 81       	ldd	r26, Z+1	; 0x01
+ 14a:	b2 81       	ldd	r27, Z+2	; 0x02
+ 14c:	8c 91       	ld	r24, X
+ 14e:	8f 7c       	andi	r24, 0xCF	; 207
+ 150:	80 62       	ori	r24, 0x20	; 32
+ 152:	8c 93       	st	X, r24
+        *this->tccrb = *this->tccrb & ~(1 << WGM02);                                 // Put working mode in Fast PWM mode
+ 154:	a3 81       	ldd	r26, Z+3	; 0x03
+ 156:	b4 81       	ldd	r27, Z+4	; 0x04
+ 158:	8c 91       	ld	r24, X
+ 15a:	87 7f       	andi	r24, 0xF7	; 247
+ 15c:	8c 93       	st	X, r24
+        *this->tccra = *this->tccra | ((1 << WGM01) | (1 << WGM00));
+ 15e:	a1 81       	ldd	r26, Z+1	; 0x01
+ 160:	b2 81       	ldd	r27, Z+2	; 0x02
+ 162:	8c 91       	ld	r24, X
+ 164:	83 60       	ori	r24, 0x03	; 3
+ 166:	8c 93       	st	X, r24
+        *this->tccrb = ((*this->tccrb & ~(1 << CS02)) | (1 << CS01)) & ~(1 << CS00); // Set prescaler to 8
+ 168:	03 80       	ldd	r0, Z+3	; 0x03
+ 16a:	f4 81       	ldd	r31, Z+4	; 0x04
+ 16c:	e0 2d       	mov	r30, r0
+ 16e:	80 81       	ld	r24, Z
+ 170:	88 7f       	andi	r24, 0xF8	; 248
+ 172:	82 60       	ori	r24, 0x02	; 2
+ 174:	80 83       	st	Z, r24
+ 176:	4c c0       	rjmp	.+152    	; 0x210 <_ZN7__PWM__5beginEv+0xe6>
+    }
+    else if (this->tccra == &TCCR1A)
+ 178:	80 38       	cpi	r24, 0x80	; 128
+ 17a:	91 05       	cpc	r25, r1
+ 17c:	19 f5       	brne	.+70     	; 0x1c4 <_ZN7__PWM__5beginEv+0x9a>
+    {
+        DDRB = DDRB | ((1 << PB1) | (1 << PB2));                                     // Set OCA & OCB as OUTPUT
+ 17e:	84 b1       	in	r24, 0x04	; 4
+ 180:	86 60       	ori	r24, 0x06	; 6
+ 182:	84 b9       	out	0x04, r24	; 4
+        *this->tccra = (*this->tccra & ~(1 << COM1A0)) | (1 << COM1A1);              // Non-inverted PWM on OCA
+ 184:	a1 81       	ldd	r26, Z+1	; 0x01
+ 186:	b2 81       	ldd	r27, Z+2	; 0x02
+ 188:	8c 91       	ld	r24, X
+ 18a:	8f 73       	andi	r24, 0x3F	; 63
+ 18c:	80 68       	ori	r24, 0x80	; 128
+ 18e:	8c 93       	st	X, r24
+        *this->tccra = (*this->tccra & ~(1 << COM1B0)) | (1 << COM1B1);              // Non-inverted PWM on OCB
+ 190:	a1 81       	ldd	r26, Z+1	; 0x01
+ 192:	b2 81       	ldd	r27, Z+2	; 0x02
+ 194:	8c 91       	ld	r24, X
+ 196:	8f 7c       	andi	r24, 0xCF	; 207
+ 198:	80 62       	ori	r24, 0x20	; 32
+ 19a:	8c 93       	st	X, r24
+        *this->tccra = (*this->tccra & ~(1 << WGM11)) | (1 << WGM10);
+ 19c:	a1 81       	ldd	r26, Z+1	; 0x01
+ 19e:	b2 81       	ldd	r27, Z+2	; 0x02
+ 1a0:	8c 91       	ld	r24, X
+ 1a2:	8c 7f       	andi	r24, 0xFC	; 252
+ 1a4:	81 60       	ori	r24, 0x01	; 1
+ 1a6:	8c 93       	st	X, r24
+        *this->tccrb = (*this->tccrb & ~(1 << WGM13)) | (1 << WGM12);                // Put working mode in <Fast PWM> 8 bit mode
+ 1a8:	a3 81       	ldd	r26, Z+3	; 0x03
+ 1aa:	b4 81       	ldd	r27, Z+4	; 0x04
+ 1ac:	8c 91       	ld	r24, X
+ 1ae:	87 7e       	andi	r24, 0xE7	; 231
+ 1b0:	88 60       	ori	r24, 0x08	; 8
+ 1b2:	8c 93       	st	X, r24
+        *this->tccrb = ((*this->tccrb & ~(1 << CS12)) | (1 << CS11)) & ~(1 << CS10); // Set prescaler to 8
+ 1b4:	03 80       	ldd	r0, Z+3	; 0x03
+ 1b6:	f4 81       	ldd	r31, Z+4	; 0x04
+ 1b8:	e0 2d       	mov	r30, r0
+ 1ba:	80 81       	ld	r24, Z
+ 1bc:	88 7f       	andi	r24, 0xF8	; 248
+ 1be:	82 60       	ori	r24, 0x02	; 2
+ 1c0:	80 83       	st	Z, r24
+ 1c2:	26 c0       	rjmp	.+76     	; 0x210 <_ZN7__PWM__5beginEv+0xe6>
+    }
+    else if (this->tccra == &TCCR2A)
+ 1c4:	80 3b       	cpi	r24, 0xB0	; 176
+ 1c6:	91 05       	cpc	r25, r1
+ 1c8:	19 f5       	brne	.+70     	; 0x210 <_ZN7__PWM__5beginEv+0xe6>
+    {
+        DDRB = DDRB | (1 << PB3);                                                    // Set OCA as OUTPUT
+ 1ca:	84 b1       	in	r24, 0x04	; 4
+ 1cc:	88 60       	ori	r24, 0x08	; 8
+ 1ce:	84 b9       	out	0x04, r24	; 4
+        DDRD = DDRD | (1 << PD3);                                                    // Set OCB as OUTPUT
+ 1d0:	8a b1       	in	r24, 0x0a	; 10
+ 1d2:	88 60       	ori	r24, 0x08	; 8
+ 1d4:	8a b9       	out	0x0a, r24	; 10
+        *this->tccra = (*this->tccra & ~(1 << COM2A0)) | (1 << COM2A1);              // Non-inverted PWM on OCA
+ 1d6:	a1 81       	ldd	r26, Z+1	; 0x01
+ 1d8:	b2 81       	ldd	r27, Z+2	; 0x02
+ 1da:	8c 91       	ld	r24, X
+ 1dc:	8f 73       	andi	r24, 0x3F	; 63
+ 1de:	80 68       	ori	r24, 0x80	; 128
+ 1e0:	8c 93       	st	X, r24
+        *this->tccra = (*this->tccra & ~(1 << COM2B0)) | (1 << COM2B1);              // Non-inverted PWM on OCB
+ 1e2:	a1 81       	ldd	r26, Z+1	; 0x01
+ 1e4:	b2 81       	ldd	r27, Z+2	; 0x02
+ 1e6:	8c 91       	ld	r24, X
+ 1e8:	8f 7c       	andi	r24, 0xCF	; 207
+ 1ea:	80 62       	ori	r24, 0x20	; 32
+ 1ec:	8c 93       	st	X, r24
+        *this->tccrb = *this->tccrb & ~(1 << WGM22);                                 // Put working mode in Fast PWM mode
+ 1ee:	a3 81       	ldd	r26, Z+3	; 0x03
+ 1f0:	b4 81       	ldd	r27, Z+4	; 0x04
+ 1f2:	8c 91       	ld	r24, X
+ 1f4:	87 7f       	andi	r24, 0xF7	; 247
+ 1f6:	8c 93       	st	X, r24
+        *this->tccra = *this->tccra | ((1 << WGM21) | (1 << WGM20));
+ 1f8:	a1 81       	ldd	r26, Z+1	; 0x01
+ 1fa:	b2 81       	ldd	r27, Z+2	; 0x02
+ 1fc:	8c 91       	ld	r24, X
+ 1fe:	83 60       	ori	r24, 0x03	; 3
+ 200:	8c 93       	st	X, r24
+        *this->tccrb = ((*this->tccrb & ~(1 << CS22)) | (1 << CS21)) & ~(1 << CS20); // Set prescaler to 8
+ 202:	03 80       	ldd	r0, Z+3	; 0x03
+ 204:	f4 81       	ldd	r31, Z+4	; 0x04
+ 206:	e0 2d       	mov	r30, r0
+ 208:	80 81       	ld	r24, Z
+ 20a:	88 7f       	andi	r24, 0xF8	; 248
+ 20c:	82 60       	ori	r24, 0x02	; 2
+ 20e:	80 83       	st	Z, r24
+    }
+    sei(); // Enable the interrupts
+ 210:	78 94       	sei
+ 212:	08 95       	ret
+
+00000214 <_ZN7__PWM__5writeEhh>:
+ * @param  value
+ *         The PWM channel value
+ */
+void __PWM__::write(const uint8_t channel, const uint8_t value)
+{
+    switch (channel)
+ 214:	66 23       	and	r22, r22
+ 216:	19 f0       	breq	.+6      	; 0x21e <_ZN7__PWM__5writeEhh+0xa>
+ 218:	61 30       	cpi	r22, 0x01	; 1
+ 21a:	41 f0       	breq	.+16     	; 0x22c <_ZN7__PWM__5writeEhh+0x18>
+ 21c:	08 95       	ret
+    {
+        #if defined(__AVR_ATmega328P__) || \
+            defined(__AVR_ATmega328PB__)
+        case 0:
+            *this->ocra = value;
+ 21e:	dc 01       	movw	r26, r24
+ 220:	15 96       	adiw	r26, 0x05	; 5
+ 222:	ed 91       	ld	r30, X+
+ 224:	fc 91       	ld	r31, X
+ 226:	16 97       	sbiw	r26, 0x06	; 6
+ 228:	40 83       	st	Z, r20
+            break;
+ 22a:	08 95       	ret
+        case 1:
+            *this->ocrb = value;
+ 22c:	dc 01       	movw	r26, r24
+ 22e:	17 96       	adiw	r26, 0x07	; 7
+ 230:	ed 91       	ld	r30, X+
+ 232:	fc 91       	ld	r31, X
+ 234:	18 97       	sbiw	r26, 0x08	; 8
+ 236:	40 83       	st	Z, r20
+ 238:	08 95       	ret
+
+0000023a <_Z41__static_initialization_and_destruction_0ii>:
+/* Dependencies */
+#include "PWM.h"
+
+#if defined(HAS_PWM)
+__PWM__ PWM = __PWM__(&TCCR0A, &TCCR0B, &OCR0A, &OCR0B);
+ 23a:	ef 92       	push	r14
+ 23c:	ff 92       	push	r15
+ 23e:	0f 93       	push	r16
+ 240:	1f 93       	push	r17
+ 242:	cf 93       	push	r28
+ 244:	df 93       	push	r29
+ 246:	ec 01       	movw	r28, r24
+ 248:	7b 01       	movw	r14, r22
+ 24a:	01 97       	sbiw	r24, 0x01	; 1
+ 24c:	79 f4       	brne	.+30     	; 0x26c <_Z41__static_initialization_and_destruction_0ii+0x32>
+ 24e:	6f 3f       	cpi	r22, 0xFF	; 255
+ 250:	7f 4f       	sbci	r23, 0xFF	; 255
+ 252:	61 f4       	brne	.+24     	; 0x26c <_Z41__static_initialization_and_destruction_0ii+0x32>
+ 254:	08 e4       	ldi	r16, 0x48	; 72
+ 256:	10 e0       	ldi	r17, 0x00	; 0
+ 258:	27 e4       	ldi	r18, 0x47	; 71
+ 25a:	30 e0       	ldi	r19, 0x00	; 0
+ 25c:	45 e4       	ldi	r20, 0x45	; 69
+ 25e:	50 e0       	ldi	r21, 0x00	; 0
+ 260:	64 e4       	ldi	r22, 0x44	; 68
+ 262:	70 e0       	ldi	r23, 0x00	; 0
+ 264:	80 e0       	ldi	r24, 0x00	; 0
+ 266:	91 e0       	ldi	r25, 0x01	; 1
+ 268:	0e 94 7d 00 	call	0xfa	; 0xfa <_ZN7__PWM__C1EPVhS1_S1_S1_>
+ 26c:	cd 2b       	or	r28, r29
+ 26e:	39 f4       	brne	.+14     	; 0x27e <_Z41__static_initialization_and_destruction_0ii+0x44>
+ 270:	ef 20       	and	r14, r15
+ 272:	e0 94       	com	r14
+ 274:	21 f4       	brne	.+8      	; 0x27e <_Z41__static_initialization_and_destruction_0ii+0x44>
+ 276:	80 e0       	ldi	r24, 0x00	; 0
+ 278:	91 e0       	ldi	r25, 0x01	; 1
+ 27a:	0e 94 8b 00 	call	0x116	; 0x116 <_ZN7__PWM__D1Ev>
+ 27e:	df 91       	pop	r29
+ 280:	cf 91       	pop	r28
+ 282:	1f 91       	pop	r17
+ 284:	0f 91       	pop	r16
+ 286:	ff 90       	pop	r15
+ 288:	ef 90       	pop	r14
+ 28a:	08 95       	ret
+
+0000028c <_GLOBAL__sub_I_PWM>:
+ 28c:	6f ef       	ldi	r22, 0xFF	; 255
+ 28e:	7f ef       	ldi	r23, 0xFF	; 255
+ 290:	81 e0       	ldi	r24, 0x01	; 1
+ 292:	90 e0       	ldi	r25, 0x00	; 0
+ 294:	0e 94 1d 01 	call	0x23a	; 0x23a <_Z41__static_initialization_and_destruction_0ii>
+ 298:	08 95       	ret
+
+0000029a <_GLOBAL__sub_D_PWM>:
+ 29a:	6f ef       	ldi	r22, 0xFF	; 255
+ 29c:	7f ef       	ldi	r23, 0xFF	; 255
+ 29e:	80 e0       	ldi	r24, 0x00	; 0
+ 2a0:	90 e0       	ldi	r25, 0x00	; 0
+ 2a2:	0e 94 1d 01 	call	0x23a	; 0x23a <_Z41__static_initialization_and_destruction_0ii>
+ 2a6:	08 95       	ret
+
+000002a8 <_Z41__static_initialization_and_destruction_0ii>:
+/* Dependencies */
+#include "PWM.h"
+
+#if defined(HAS_PWM1)
+__PWM__ PWM1 = __PWM__(&TCCR1A, &TCCR1B, &OCR1AL, &OCR1BL);
+ 2a8:	ef 92       	push	r14
+ 2aa:	ff 92       	push	r15
+ 2ac:	0f 93       	push	r16
+ 2ae:	1f 93       	push	r17
+ 2b0:	cf 93       	push	r28
+ 2b2:	df 93       	push	r29
+ 2b4:	ec 01       	movw	r28, r24
+ 2b6:	7b 01       	movw	r14, r22
+ 2b8:	01 97       	sbiw	r24, 0x01	; 1
+ 2ba:	79 f4       	brne	.+30     	; 0x2da <_Z41__static_initialization_and_destruction_0ii+0x32>
+ 2bc:	6f 3f       	cpi	r22, 0xFF	; 255
+ 2be:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2c0:	61 f4       	brne	.+24     	; 0x2da <_Z41__static_initialization_and_destruction_0ii+0x32>
+ 2c2:	0a e8       	ldi	r16, 0x8A	; 138
+ 2c4:	10 e0       	ldi	r17, 0x00	; 0
+ 2c6:	28 e8       	ldi	r18, 0x88	; 136
+ 2c8:	30 e0       	ldi	r19, 0x00	; 0
+ 2ca:	41 e8       	ldi	r20, 0x81	; 129
+ 2cc:	50 e0       	ldi	r21, 0x00	; 0
+ 2ce:	60 e8       	ldi	r22, 0x80	; 128
+ 2d0:	70 e0       	ldi	r23, 0x00	; 0
+ 2d2:	89 e0       	ldi	r24, 0x09	; 9
+ 2d4:	91 e0       	ldi	r25, 0x01	; 1
+ 2d6:	0e 94 7d 00 	call	0xfa	; 0xfa <_ZN7__PWM__C1EPVhS1_S1_S1_>
+ 2da:	cd 2b       	or	r28, r29
+ 2dc:	39 f4       	brne	.+14     	; 0x2ec <_Z41__static_initialization_and_destruction_0ii+0x44>
+ 2de:	ef 20       	and	r14, r15
+ 2e0:	e0 94       	com	r14
+ 2e2:	21 f4       	brne	.+8      	; 0x2ec <_Z41__static_initialization_and_destruction_0ii+0x44>
+ 2e4:	89 e0       	ldi	r24, 0x09	; 9
+ 2e6:	91 e0       	ldi	r25, 0x01	; 1
+ 2e8:	0e 94 8b 00 	call	0x116	; 0x116 <_ZN7__PWM__D1Ev>
+ 2ec:	df 91       	pop	r29
+ 2ee:	cf 91       	pop	r28
+ 2f0:	1f 91       	pop	r17
+ 2f2:	0f 91       	pop	r16
+ 2f4:	ff 90       	pop	r15
+ 2f6:	ef 90       	pop	r14
+ 2f8:	08 95       	ret
+
+000002fa <_GLOBAL__sub_I_PWM1>:
+ 2fa:	6f ef       	ldi	r22, 0xFF	; 255
+ 2fc:	7f ef       	ldi	r23, 0xFF	; 255
+ 2fe:	81 e0       	ldi	r24, 0x01	; 1
+ 300:	90 e0       	ldi	r25, 0x00	; 0
+ 302:	0e 94 54 01 	call	0x2a8	; 0x2a8 <_Z41__static_initialization_and_destruction_0ii>
+ 306:	08 95       	ret
+
+00000308 <_GLOBAL__sub_D_PWM1>:
+ 308:	6f ef       	ldi	r22, 0xFF	; 255
+ 30a:	7f ef       	ldi	r23, 0xFF	; 255
+ 30c:	80 e0       	ldi	r24, 0x00	; 0
+ 30e:	90 e0       	ldi	r25, 0x00	; 0
+ 310:	0e 94 54 01 	call	0x2a8	; 0x2a8 <_Z41__static_initialization_and_destruction_0ii>
+ 314:	08 95       	ret
+
+00000316 <main>:
+
+uint8_t value = 0;
+
+int main(void)
+{
+    PWM.begin();
+ 316:	80 e0       	ldi	r24, 0x00	; 0
+ 318:	91 e0       	ldi	r25, 0x01	; 1
+ 31a:	0e 94 95 00 	call	0x12a	; 0x12a <_ZN7__PWM__5beginEv>
+    PWM1.begin();
+ 31e:	89 e0       	ldi	r24, 0x09	; 9
+ 320:	91 e0       	ldi	r25, 0x01	; 1
+ 322:	0e 94 95 00 	call	0x12a	; 0x12a <_ZN7__PWM__5beginEv>
+    while (1) 
+    {
+        PWM.write(0, value);
+ 326:	40 91 12 01 	lds	r20, 0x0112	; 0x800112 <value>
+ 32a:	60 e0       	ldi	r22, 0x00	; 0
+ 32c:	80 e0       	ldi	r24, 0x00	; 0
+ 32e:	91 e0       	ldi	r25, 0x01	; 1
+ 330:	0e 94 0a 01 	call	0x214	; 0x214 <_ZN7__PWM__5writeEhh>
+        PWM.write(1, 255 - value);
+ 334:	40 91 12 01 	lds	r20, 0x0112	; 0x800112 <value>
+ 338:	40 95       	com	r20
+ 33a:	61 e0       	ldi	r22, 0x01	; 1
+ 33c:	80 e0       	ldi	r24, 0x00	; 0
+ 33e:	91 e0       	ldi	r25, 0x01	; 1
+ 340:	0e 94 0a 01 	call	0x214	; 0x214 <_ZN7__PWM__5writeEhh>
+        PWM1.write(1, value);
+ 344:	40 91 12 01 	lds	r20, 0x0112	; 0x800112 <value>
+ 348:	61 e0       	ldi	r22, 0x01	; 1
+ 34a:	89 e0       	ldi	r24, 0x09	; 9
+ 34c:	91 e0       	ldi	r25, 0x01	; 1
+ 34e:	0e 94 0a 01 	call	0x214	; 0x214 <_ZN7__PWM__5writeEhh>
+        PWM1.write(0, 255 - value);
+ 352:	40 91 12 01 	lds	r20, 0x0112	; 0x800112 <value>
+ 356:	40 95       	com	r20
+ 358:	60 e0       	ldi	r22, 0x00	; 0
+ 35a:	89 e0       	ldi	r24, 0x09	; 9
+ 35c:	91 e0       	ldi	r25, 0x01	; 1
+ 35e:	0e 94 0a 01 	call	0x214	; 0x214 <_ZN7__PWM__5writeEhh>
+        value++;
+ 362:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <value>
+ 366:	8f 5f       	subi	r24, 0xFF	; 255
+ 368:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <value>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 36c:	8f e3       	ldi	r24, 0x3F	; 63
+ 36e:	9c e9       	ldi	r25, 0x9C	; 156
+ 370:	01 97       	sbiw	r24, 0x01	; 1
+ 372:	f1 f7       	brne	.-4      	; 0x370 <main+0x5a>
+ 374:	00 c0       	rjmp	.+0      	; 0x376 <main+0x60>
+ 376:	00 00       	nop
+ 378:	d6 cf       	rjmp	.-84     	; 0x326 <main+0x10>
+
+0000037a <__tablejump2__>:
+ 37a:	ee 0f       	add	r30, r30
+ 37c:	ff 1f       	adc	r31, r31
+ 37e:	05 90       	lpm	r0, Z+
+ 380:	f4 91       	lpm	r31, Z
+ 382:	e0 2d       	mov	r30, r0
+ 384:	09 94       	ijmp
+
+00000386 <__do_global_dtors>:
+ 386:	10 e0       	ldi	r17, 0x00	; 0
+ 388:	cc e5       	ldi	r28, 0x5C	; 92
+ 38a:	d0 e0       	ldi	r29, 0x00	; 0
+ 38c:	04 c0       	rjmp	.+8      	; 0x396 <__do_global_dtors+0x10>
+ 38e:	fe 01       	movw	r30, r28
+ 390:	0e 94 bd 01 	call	0x37a	; 0x37a <__tablejump2__>
+ 394:	21 96       	adiw	r28, 0x01	; 1
+ 396:	ce 35       	cpi	r28, 0x5E	; 94
+ 398:	d1 07       	cpc	r29, r17
+ 39a:	c9 f7       	brne	.-14     	; 0x38e <__do_global_dtors+0x8>
+ 39c:	f8 94       	cli
+
+0000039e <__stop_program>:
+ 39e:	ff cf       	rjmp	.-2      	; 0x39e <__stop_program>
